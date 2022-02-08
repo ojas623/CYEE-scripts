@@ -4,4 +4,4 @@ sudo adduser $user
 echo "Enter the password for the user:"
 read -s password
 sudo usermod -p $password $user
-
+echo "added $user"
