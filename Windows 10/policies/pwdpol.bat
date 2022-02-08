@@ -10,3 +10,5 @@ net accounts /minpwage:10
 net accounts /uniquepw:5
 
 echo "done. please enable password must meet complexity requirements, and disable reversible encryption"
+pause
+exit
