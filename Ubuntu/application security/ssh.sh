@@ -3,20 +3,20 @@ read answer
 if [[answer -e "y"]]
 then
 echo "enabling SSH..."
-sudo  apt-fast install openssh-client -y
-find /etc/ssh -xdev -type f -name 'ssh_host_*_key' -exec chown root:root {} \;
-find /etc/ssh -xdev -type f -name 'ssh_host_*_key' -exec chmod u-x,go-rwx {} \;
-find /etc/ssh -xdev -type f -name 'ssh_host_*_key.pub' -exec chmod u-x,go- wx {} \;
-find /etc/ssh -xdev -type f -name 'ssh_host_*_key.pub' -exec chown root:root {} \;
-cp ~/Linux/ssh/sshd_config /etc/ssh/sshd_config
-/usr/sbin/sshd -t
-systemctl restart sshd.service
-systemctl reload sshd
-fi
+sudo systemctl enable ssh
+sudo systemctl start ssh
 echo "SSH enabled."
-else
-
-echo "disabling SSH packages..."
-apt-fast autoremove -y --purge openssh-server ssh
-echo "done."
 fi
+
+echo "securing SSH..."
+sudo sed -i 's/^#Protocol 2/Protocol 2/' /etc/ssh/sshd_config
+sudo sed -i 's/^#LogLevel INFO/LogLevel VERBOSE/' /etc/ssh/sshd_config
+sudo sed -i 's/^#X11Forwarding yes/X11Forwarding no/' /etc/ssh/sshd_config
+sudo sed -i 's/^#MaxAuthTries 6/MaxAuthTries 4/' /etc/ssh/sshd_config
+sudo sed -i 's/^#IgnoreRhosts yes/IgnoreRhosts yes/' /etc/ssh/sshd_config
+sudo sed -i 's/^#HostbasedAuthentication no/HostbasedAuthentication no/' /etc/ssh/sshd_config
+sudo sed -i 's/^#PermitRootLogin yes/PermitRootLogin no/' /etc/ssh/sshd_config
+sudo sed -i 's/^#PermitEmptyPasswords no/PermitEmptyPasswords no/' /etc/ssh/sshd_config
+sudo sed -i 's/^#PermitUserEnvironment no/PermitUserEnvironment no/' /etc/ssh/sshd_config
+sudo sed -i 's/^#Ciphers aes256-ctr,aes192-ctr,aes128-ctr/Ciphers aes256-ctr,aes192-ctr,aes128-ctr/' /etc/ssh/sshd_config
+sudo sed -i 's/^#MACs
