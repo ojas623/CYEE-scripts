@@ -1,0 +1,24 @@
+PermitRootLogin no
+
+MaxAuthTries 3
+
+LoginGraceTime 20
+
+PermitEmptyPasswords no
+
+PermitRootLogin no
+
+ChallengeResponseAuthentication no
+KerberosAuthentication no
+GSSAPIAuthentication no
+
+X11Forwarding no
+
+PermitUserEnvironment no
+
+AllowAgentForwarding no
+AllowTcpForwarding no
+PermitTunnel no
+
+
+https://www.digitalocean.com/community/tutorials/how-to-harden-openssh-on-ubuntu-18-04
