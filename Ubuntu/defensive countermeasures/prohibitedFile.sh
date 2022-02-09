@@ -1,18 +1,6 @@
 echo "deleting prohibited files..."
-echo "are the forensics questions answered?"
-echo "y/n"
-read answer
-if [[answer -e "y"]]
-then
-delete_files
-
-else
-echo "exiting. please do them."
-
-fi
 
 
-delete_files(){
 sudo rm -f /home/*/*.mp3
 sudo rm -f /home/*/*.txt
 sudo rm -f /home/*/*.mp4
@@ -47,6 +35,6 @@ sudo rm -f /home/*/*.msi
 sudo rm -f /home/*/*.deb
 sudo rm -f /home/*/*.dmg
 sudo rm -f /home/*/*.rpm
-}
+
 
 echo "deleted prohibited files."
