@@ -1,7 +1,3 @@
-echo "do you want SSH to be enabled?"
-read answer
-if [[answer -e "y"]]
-then
 echo "enabling SSH..."
 sudo systemctl enable ssh
 sudo systemctl start ssh
