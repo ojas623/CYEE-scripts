@@ -2,11 +2,26 @@
 PubkeyAuthentication yes
 PasswordAuthentication yes
 MaxAuthTries 3
+HostbasedAuthentication no
 
 #users/passwords
 ClientAliveCountMax 1
 PermitRootLogin no
-LoginGraceTime 20
+LoginGraceTime 60
 PermitEmptyPasswords no
 PermitRootLogin no
+MaxStartups 1
+ClientAliveInterval 300
+ClientAliveCountMax 0
 
+#rhosts
+IgnoreRhosts yes
+RhostsAuthentication no
+RSAAUthentication yes
+
+#forwarding
+AllowTcpForwarding no
+X11Forwarding no
+
+#logging
+LogLevel VERBOSE
