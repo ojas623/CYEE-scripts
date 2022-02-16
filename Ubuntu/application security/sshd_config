@@ -1,22 +1,12 @@
-PermitRootLogin no
-
+#authentication
+PubkeyAuthentication yes
+PasswordAuthentication yes
 MaxAuthTries 3
 
-LoginGraceTime 20
-
-PermitEmptyPasswords no
-
+#users/passwords
+ClientAliveCountMax 1
 PermitRootLogin no
-
-ChallengeResponseAuthentication no
-KerberosAuthentication no
-GSSAPIAuthentication no
-
-X11Forwarding no
-
-PermitUserEnvironment no
-
-AllowAgentForwarding no
-AllowTcpForwarding no
-PermitTunnel no
+LoginGraceTime 20
+PermitEmptyPasswords no
+PermitRootLogin no
 
