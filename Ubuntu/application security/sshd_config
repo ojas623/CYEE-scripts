@@ -25,3 +25,7 @@ X11Forwarding no
 
 #logging
 LogLevel VERBOSE
+PrintLastLog yes
+
+#ssh version
+Protocol 2
