@@ -1,5 +1,5 @@
 echo "enabling SSH..."
-sudo systemctl enable ssh
-sudo systemctl start ssh
+apt-fast install openssh-server
+apt-fast install openssh-client
+systemctl reload sshd
 echo "SSH enabled."
-
