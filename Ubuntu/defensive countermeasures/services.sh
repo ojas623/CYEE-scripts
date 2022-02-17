@@ -1,3 +1,5 @@
+#! /bin/bash
+
 apt install systemctl 
 echo "systemctl installed."
 
@@ -54,4 +56,3 @@ echo "SNMP server removed."
 #SNMP is simple netowrk management protocol, used to monitor and control network devices
 
 #CIS section 2.1
-
