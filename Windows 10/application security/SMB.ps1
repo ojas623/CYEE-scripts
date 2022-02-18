@@ -25,8 +25,7 @@ function SMBv2 {
     # ^ blocking outbound SMB traffic
 
     Set-SmbServerConfiguration –EnableSMB2Protocol $true
-    # ^enables SMBv2
-
+    # ^enables SMBv2 on the entire file server.
     Write-Host "Make sure the MSFT Network server: digitally sign communications GP is enabled"
 
     Set-SmbServerConfiguration -AutoShareServer $False -AutoShareWorkstation $False 
