@@ -1,3 +1,7 @@
+@echo off
+setlocal enabledelayedexpansion
+net session
+
 echo "disabling guest and admin account..."
 net user guest /active:no
 net user administrator /active:no
