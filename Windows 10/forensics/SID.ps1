@@ -1,0 +1,1 @@
+wmic useraccount get domain,name,sid

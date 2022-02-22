@@ -13,6 +13,11 @@ echo "5). Find the hash of a file          6). exit"
 if %answer%==1 (
   set /p answer=What would you like to do?: [UID/SID]
     if %answer%==SID (
-        call "CYEE-scripts\Windows 10\forensics\SID.ps1"
+        powershell -File C:\script\CYEE-scripts\Windows 10\forensics\SID.ps1
     )
+    pause
+    exit
+
+   
 )
+
