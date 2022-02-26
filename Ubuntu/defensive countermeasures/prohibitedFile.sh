@@ -1,40 +1,57 @@
 echo "deleting prohibited files..."
-
-
-sudo rm -f /home/*/*.mp3
-sudo rm -f /home/*/*.txt
-sudo rm -f /home/*/*.mp4
-sudo rm -f /home/*/*.mpg
-sudo rm -f /home/*/*.mpeg
-sudo rm -f /home/*/*.avi
-sudo rm -f /home/*/*.mov
-sudo rm -f /home/*/*.wmv
-sudo rm -f /home/*/*.flv
-sudo rm -f /home/*/*.swf
-sudo rm -f /home/*/*.mkv
-sudo rm -f /home/*/*.vob
-sudo rm -f /home/*/*.ogg
-sudo rm -f /home/*/*.ogv
-sudo rm -f /home/*/*.ogx
-sudo rm -f /home/*/*.ogm
-sudo rm -f /home/*/*.webm
-sudo rm -f /home/*/*.rm
-sudo rm -f /home/*/*.ram
-sudo rm -f /home/*/*.rpm
-sudo rm -f /home/*/*.rar
-sudo rm -f /home/*/*.zip
-sudo rm -f /home/*/*.tar
-sudo rm -f /home/*/*.gz
-sudo rm -f /home/*/*.bz2
-sudo rm -f /home/*/*.7z
-sudo rm -f /home/*/*.iso
-sudo rm -f /home/*/*.exe
-sudo rm -f /home/*/*.dll
-sudo rm -f /home/*/*.cab
-sudo rm -f /home/*/*.msi
-sudo rm -f /home/*/*.deb
-sudo rm -f /home/*/*.dmg
-sudo rm -f /home/*/*.rpm
+cd /
+sudo rm *.pdf
+sudo rm *.doc
+sudo rm *.docx
+sudo rm *.xls
+sudo rm *.xlsx
+sudo rm *.ppt
+sudo rm *.pptx
+sudo rm *.odt
+sudo rm *.ods
+sudo rm *.odp
+sudo rm *.odg
+sudo rm *.odf
+sudo rm *.odb
+sudo rm *.odc
+sudo rm *.odm
+sudo rm *.mp3
+sudo rm *.mp4
+sudo rm *.mov
+sudo rm *.gif
+sudo rm *.jpg
+sudo rm *.jpeg
+sudo rm *.png
+sudo rm *.wav
+sudo rm *.m4a
+sudo rm *.ogg
+sudo rm *.avi
+sudo rm *.flv
+sudo rm *.wmv
+sudo rm *.mpg
+sudo rm *.mpeg
+sudo rm *.m4v
+sudo rm *.3gp
+sudo rm *.3g2
+sudo rm *.webm
+sudo rm *.tif
+sudo rm *.gsm
+sudo rm *.flac
+sudo rm *.au 
+sudo rm *.aiff
+sudo rm *.iff
+sudo rm *.aif
+sudo rm *.vox
+sudo rm *.vob
+sudo rm *.swf
+sudo rm *.srt 
+sudo rm *.rm 
+sudo rm *.raw
+sudo rm *.wma
+sudo rm *.m4p
+sudo rm *.mid
+sudo rm *.ape
+sudo rm *.dss
 
 
 echo "deleted prohibited files."

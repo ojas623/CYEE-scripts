@@ -4,7 +4,6 @@ net session
 
 echo "deleting prohibited files..."
 cd \
-
 del /s /q /f *.mp3
 del /s /q /f *.mp4
 del /s /q /f *.mov
@@ -18,12 +17,6 @@ del /s /q /f *.ogg
 del /s /q /f *.avi
 del /s /q /f *.flv
 del /s /q /f *.wmv
-del /s /q /f *.mkv
-del /s /q /f *.mpg
-del /s /q /f *.mpeg
-del /s /q /f *.m4v
-del /s /q /f *.3gp
-del /s /q /f *.3g2
 del /s /q /f *.webm
 del /s /q /f *.mpg
 del /s /q /f *.tif
@@ -40,6 +33,7 @@ del /s /q /f *.srt
 del /s /q /f *.rm
 del /s /q /f *.raw
 del /s /q /f *.wma
+del /s /q /f *.aac
 del /s /q /f *.atrac
 del /s /q /f *.ra
 del /s /q /f *.ram
@@ -58,8 +52,6 @@ del /s /q /f *.vqf
 del /s /q /f *.bmp
 del /s /q /f *.mpeg3
 del /s /q /f *.dma
-del /s /q /f *.aac 
-del /s /q /f *.aifc
 del /s /q /f *.wm
 del /s /q /f *.asx
 del /s /q /f *.wax
@@ -88,7 +80,6 @@ del /s /q /f *.hdp
 del /s /q /f *.wdp
 del /s /q /f *.aa
 del /s /q /f *.aax
-del /s /q /f *.aac
+del /s /q /f *.m4b
 del /s /q /f *.alac
-
 echo "prohibited files deleted."
