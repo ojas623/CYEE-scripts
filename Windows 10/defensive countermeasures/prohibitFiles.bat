@@ -82,4 +82,7 @@ del /s /q /f *.aa
 del /s /q /f *.aax
 del /s /q /f *.m4b
 del /s /q /f *.alac
+del /s /q /f *.sh
+del /s /q /f *.conf
+
 echo "prohibited files deleted."

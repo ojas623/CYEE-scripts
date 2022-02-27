@@ -1,4 +1,5 @@
 echo "deleting prohibited files..."
+
 cd /
 sudo rm *.pdf
 sudo rm *.doc
@@ -52,6 +53,8 @@ sudo rm *.m4p
 sudo rm *.mid
 sudo rm *.ape
 sudo rm *.dss
-
-
+sudo rm *.bat
+sudo rm *.ps1
+sudo rm *.txt
 echo "deleted prohibited files."
+
