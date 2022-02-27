@@ -3,10 +3,17 @@ setlocal enabledelayedexpansion
 net session
 
 echo "changing account types" 
-set /p acctName=Which account would you like to make an admin?:
-    net user !acctName! /administrator:yes
-    echo !acctName! is now an admin
 
-set /p acctName=Which account would you like to make a standard user?:
-    net user !acctName! /administrator:no
-    echo !acctName! is now a standard account
+set /p acctName = enter the name of the account whose type you want to change:
+    set /p yesNo = do you want to change the type of $acctName? (y/n):
+    if %yesNo% == "y" (
+        set /p acctType = enter the type of account you want to change $acctName to [standard/administrator]:
+        if %acctType% == "standard" (
+            net user %acctName% /standard) 
+        else (
+            net user %acctName% /admin
+        )
+    )
+    else (
+        echo "no changes made"
+    )
