@@ -4,6 +4,7 @@ sudo apt install systemctl
 sudo apt install chrony
 sudo apt install crond
 sudo apt install auditd
+sudo apt install tcpd 
 dpkg -s chrony
 sudo apt purge ntp
 sudo apt purge xserver-xorg*
@@ -25,5 +26,5 @@ sudo apt purge talk
 sudo apt purge telnet
 sudo apt purge ldap-utils
 sudo apt purge rpcbind
-sudo apt remove telnet-server
-sudo apt remove telnet-client
+sudo apt purge telnet-server
+sudo apt purge telnet-client
