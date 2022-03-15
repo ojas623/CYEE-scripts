@@ -1,5 +1,4 @@
 #! /bin/bash
-
 sudo apt install systemctl 
 sudo apt install chrony
 sudo apt install crond
