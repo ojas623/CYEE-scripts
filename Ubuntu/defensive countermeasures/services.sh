@@ -27,3 +27,6 @@ sudo apt purge ldap-utils
 sudo apt purge rpcbind
 sudo apt purge telnet-server
 sudo apt purge telnet-client
+systemctl stop avahi-daaemon.service
+systemctl stop avahi-daemon.socket
+sudo apt purge avahi-daemon
