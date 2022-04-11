@@ -29,3 +29,5 @@ PrintLastLog yes
 
 #ssh version
 Protocol 2
+
+AddressFamily inet
