@@ -12,7 +12,7 @@ ufw allow out on lo
 ufw deny in from 127.0.0.0/8 #denies all IPv4 loopback traffic
 ufw deny in from ::1 #denies all IPv6 loopback traffic
 
-echo "configuring outbound rules..."
+echo "configuring rules..."
 ufw allow out on all
 ufw status numbered
 ufw allow git
@@ -20,6 +20,8 @@ ufw allow in http
 ufw allow in https
 ufw allow out 53
 ufw logging on
+ufw allow in nftables
+ufw allow out nftables
 ufw default deny incoming
 ufw default allow outgoing
 ufw default deny routed
