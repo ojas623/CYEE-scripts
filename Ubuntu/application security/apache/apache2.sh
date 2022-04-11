@@ -13,5 +13,3 @@ echo "starting apache"
 sudo systemctl start apache2
 echo "apache started"
 
-
-
