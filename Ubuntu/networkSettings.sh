@@ -1,5 +1,5 @@
 #!/bin/bash
-#FROM CIS page 178
+
 
 if command -v nmcli >/dev/null 2>&1 ; then
  nmcli radio all off
@@ -24,3 +24,4 @@ grep -Els "^\s*net\.ipv4\.ip_forward\s*=\s*1" /etc/sysctl.conf
 read filename; do sed -ri "s/^\s*(net\.ipv4\.ip_forward\s*)(=)(\s*\S+\b).*$/#
 *REMOVED* \1/" $filename; done; sysctl -w net.ipv4.ip_forward=0; sysctl -w
 net.ipv4.route.flush=1
+
