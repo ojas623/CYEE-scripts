@@ -9,8 +9,14 @@ update-grub
 echo "updated grub"
 
 echo "installing silversearcher-ag"
-apt install silversearcher-ag
+sudo apt install silversearcher-ag
 echo "installed silversearcher-ag"
 
 echo "installig curl"
-apt-get install curl -y
+sudo apt install curl
+
+echo "disabling autofs"
+sudo apt purge autofs
+
+echo "installing git"
+sudo apt install git
