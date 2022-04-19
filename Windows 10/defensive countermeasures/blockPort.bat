@@ -2,8 +2,6 @@
 setlocal enabledelayedexpansion
 net session
 
-
-
 netsh advfirewall firewall add rule name="BlockDNSZoneTransfers" protocol=TCP dir=in localport=53 action=block
 netsh advfirewall firewall add rule name="BlockTFTPDaemon" protocol=UDP dir=in localport=69 action=block
 netsh advfirewall firewall add rule name="BlockLink" protocol=TCP dir=in localport=87 action=block
