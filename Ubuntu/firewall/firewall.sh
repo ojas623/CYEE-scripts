@@ -36,5 +36,10 @@ sudo ufw allow out http
 sudo ufw allow out https  
 sudo ufw allow out 8080 
 
+echo "enabling GUFW"
+sudo apt install gufw -y
+sudo gufw enable
+echo "done."
+
 #CIS 3.5.2
 
