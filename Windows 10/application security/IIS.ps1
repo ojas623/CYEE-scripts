@@ -10,7 +10,7 @@ Set-WebConfigurationProperty -Filter system.webserver/directorybrowse -PSPath ii
 Get-ChildItem -Path IIS:\AppPools\ | Select-Object name, state, <#@{e={$_.processModel.password};l="password"}, #> @{e={$_.processModel.identityType};l="identityType"}
 
 # Set Unique Application Pools
-Set-ItemProperty -Path 'IIS:\Sites\Skynet' -Name applicationPool -Value <apppool name>
+Set-ItemProperty -Path 'IIS:\Sites\Skynet' -Name applicationPool -Value apppool name>
 
 # Configure Application Pool Identity for Anonymous Users
 Set-ItemProperty -Path IIS:\AppPools\Skynet -Name passAnonymousToken -Value True
@@ -110,12 +110,12 @@ Set-WebConfigurationProperty -pspath 'MACHINE/WEBROOT/APPHOST' -filter "system.w
 # Set notListedCgisAllowed to false
 Set-WebConfigurationProperty -pspath 'MACHINE/WEBROOT/APPHOST' -filter "system.webServer/security/isapiCgiRestriction" -name "notListedCgisAllowed" -value "False"
 
-# Enable Dynamic IP Address restrictions
+# Enable Dynamic IP Address restrictionsss
 Set-WebConfigurationProperty -pspath 'MACHINE/WEBROOT/APPHOST' -filter "system.webServer/security/dynamicIpSecurity/denyByConcurrentRequests" -name "enabled" -value "True"
-Set-WebConfigurationProperty -pspath 'MACHINE/WEBROOT/APPHOST' -filter "system.webServer/security/dynamicIpSecurity/denyByConcurrentRequests" -name "maxConcurrentRequests" -value <number of requests>
+Set-WebConfigurationProperty -pspath 'MACHINE/WEBROOT/APPHOST' -filter "system.webServer/security/dynamicIpSecurity/denyByConcurrentRequests" -name "maxConcurrentRequests" -value number of requests>
 
 # Move IIS Web log location from the default location
-Set-WebConfigurationProperty -pspath 'MACHINE/WEBROOT/APPHOST' -filter "system.applicationHost/sites/siteDefaults/logFile" -name "directory" -value <new log location>
+Set-WebConfigurationProperty -pspath 'MACHINE/WEBROOT/APPHOST' -filter "system.applicationHost/sites/siteDefaults/logFile" -name "directory" -value new log location>
 
 # Enable Advanced IIS Logging
 # Open IIS Manager, click the server in the Connections Pane, Click the logging icon, click select fields
