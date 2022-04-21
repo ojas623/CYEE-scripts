@@ -10,6 +10,8 @@ if %errorlevel%==0 (
 	pause
     exit
 )
+
+
 echo "setting audit policy..."
 auditpol /set /category:* /success:enable
 auditpol /set /category:* /failure:enable
