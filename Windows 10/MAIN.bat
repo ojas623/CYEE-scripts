@@ -10,7 +10,7 @@ if %errorlevel%==0 (
 )
  cls
  set /p answer=Have you answered all the forensics questions?(y/n): 
-	if /I {%answer%}=={y} (
+	if /I %answer%==y (
 		goto :menu
 	) else (
 		echo please finish them before continuing
@@ -18,9 +18,6 @@ if %errorlevel%==0 (
 		exit
 	)
 
-
-
-:menu
     cls 
     echo "CYEE"
 
@@ -36,8 +33,8 @@ if %errorlevel%==0 (
     echo "7. miscellaneous options"
     echo "8. updates"
     echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-    set /p answer=:
-    if /I {%answer%}=={1} (
+    set /p menuAnswer=:
+    if %menuAnswer%=="1" (
         echo "which critical service do you want to secure from the list below?: "
         echo "1. SMB"
         echo "2. FTP"
@@ -45,49 +42,142 @@ if %errorlevel%==0 (
         echo "4. DNS"
         echo "5. BitLocker"
         
-        set /p answer=:
-        if /I {%answer%}=={1} (
+        set /p answerServ=:
+        if %answerServ%=="1" (
             echo "SMB"
             echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-            call :SMBv2
+            call SMBv2.bat
         )
 
-        if /I {%answer%}=={2} (
+        if %answerServ%=="2" (
             echo "FTP"
             echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-            call :FTP 
+            call FTP.bat
         )
-        if /I {%answer%}=={3} (
+        if %answerServ%=="3" (
             echo "RDP"
             echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
-            call :RDP
+            call RDP.bat
+        )
+
+    )
+
+
+     if %menuAnswer%=="2" (
+        echo "what do you want to do from the list below?: "
+        echo "1. disable unwanted services and features"
+        echo "2. block insecure ports"
+        echo "3. enable and configure firewall"
+        echo "4. deleted prohibited files"
+        echo "5. file shares"
+
+        set /p answerDefensive=:
+        if %answerDefensive%=="1" (
+            echo "unwanted services and features"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call disableServFeat.bat
+        )
+
+        if %answerDefensive%=="2" (
+            echo "insecure ports"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call blockPort.bat
+        )
+
+        if %answerDefensive%=="3" (
+            echo "firewall"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call firewall.bat
+        )
+
+        if %answerDefensive%=="4" (
+            echo "prohibited files"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call prohibitFiles.bat
+        )
+
+        if %answerDefensive%=="5" (
+            echo "file shares"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call fileShares.bat
+        )
+        
         )
 
 
-     if /I {%answer%}=={2} (
-        goto :firewall
-        ) 
+     if %menuAnswer%=="3" (
+        echo "which user account option do you want to run from the list below?:"
+        echo "1. account type"
+        echo "2. add account"
+        echo "3. delete account"
+        echo "4. disable admin and guest accounts"
+        echo "5. configure groups"
+        echo "6. configure user properties"
 
-     if /I {%answer%}=={3} (
-        goto :useracc
+        set /p answerUser=:
+        if %answerUser%=="1" (
+            echo "account type"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call acctType.bat
+        )
 
-    ) elseif /I {%answer%}=={4} (
-        goto :policies
+        if %answerUser%=="2" (
+            echo "add account"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call addAccount.bat
+        )
 
-    ) elseif /I {%answer%}=={5} (
-        goto :firefox
+        if %answerUser%=="3" (
+            echo "delete account"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call delAccount.bat
+        )
 
-    ) elseif /I {%answer%}=={6} (
-        goto :lgpo
+        if %answerUser%=="4" (
+            echo "disable admin and guest accounts"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call disAdmGst.bat
+        )
 
-    ) elseif /I {%answer%}=={7} (
-        goto :misc
+        if %answerUser%=="5" (
+            echo "configure groups"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call groups.bat
+        )
 
-    ) elseif /I {%answer%}=={8} (
-        goto :updates
+        if %answerUser%=="6" (
+            echo "configure user properties"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call userProperty.bat
+        )
+        
+        )
 
-    ) else (
-        echo "invalid option"
-        pause
-        exit
-    )
+    if %menuAnswer%=="4" (
+        echo "which policy option do you want to run from the list below?:"
+        echo "1. account lockout policy"
+        echo "2. password policy"
+        echo "3. audit policy" 
+
+        set /p answerPolicy=:
+        if %answerPolicy%=="1" (
+            echo "account lockout policy"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call accountLockout.bat
+        )
+
+        if %answerPolicy%=="2" (
+            echo "password policy"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call pwdpol.bat
+        )
+
+        if %answerPolicy%=="3" (
+            echo "audit policy"
+            echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+            call auditpol.bat
+        )
+        
+        )
+
+        
