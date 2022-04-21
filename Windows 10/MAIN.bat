@@ -9,11 +9,11 @@ if %errorlevel%==0 (
     exit
 )
  cls
- set /p answer=Have you answered all the forensics questions?[y/n]: 
+ set /p answer=Have you answered all the forensics questions?(y/n): 
 	if /I {%answer%}=={y} (
 		goto :menu
 	) else (
-		echo please go and answer them.
+		echo please finish them before continuing
 		pause
 		exit
 	)
@@ -50,21 +50,25 @@ if %errorlevel%==0 (
             echo "SMB"
             echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             call :SMBv2
+        )
 
         if /I {%answer%}=={2} (
             echo "FTP"
             echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             call :FTP 
+        )
         if /I {%answer%}=={3} (
             echo "RDP"
             echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
             call :RDP
+        )
 
 
-    ) elseif /I {%answer%}=={2} (
-        goto :defcon
+     if /I {%answer%}=={2} (
+        goto :firewall
+        ) 
 
-    ) elseif /I {%answer%}=={3} (
+     if /I {%answer%}=={3} (
         goto :useracc
 
     ) elseif /I {%answer%}=={4} (
