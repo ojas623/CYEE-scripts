@@ -11,9 +11,9 @@ set /p acctName = enter the name of the account whose type you want to change:
         if %acctType% == "standard" (
             net user %acctName% /standard) 
         else (
-            net user %acctName% /admin
-        )
-    )
+            net user %acctName% /admin)
+    
     else (
-        echo "no changes made"
+        echo "no changes made")
+
     )
