@@ -1,5 +1,5 @@
 echo "setting audit policies..."
-cp ~/script/CYEE-scripts/Ubuntu/policies/auditd.conf /etc/audit/auditd.conf
+cp ~/CYEE-scripts/Ubuntu/policies/auditd.conf /etc/audit/auditd.conf
 apt install auditd audispd-plugins
 apt install rsyslog
 systemctl --now enable auditd
