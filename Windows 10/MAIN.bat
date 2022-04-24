@@ -18,6 +18,7 @@ if %errorlevel%==0 (
 		exit
 	)
 
+:menu 
     cls 
     echo "CYEE"
 
