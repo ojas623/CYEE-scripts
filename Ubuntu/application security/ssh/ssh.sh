@@ -1,12 +1,11 @@
 echo "enabling SSH..."
-apt-fast install openssh-server
-apt-fast install openssh-client
+apt install openssh-server
+apt install openssh-client
 
 cp ~/CYEE-Scripts/Ubuntu/application security/ssh/sshd_config /etc/ssh/sshd_config
-/usr/sbin/sshd -t
 
 sudo service ssh restart
-systemctl reload sshd
+
 
 echo "SSH enabled."
 
