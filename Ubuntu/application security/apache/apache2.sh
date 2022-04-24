@@ -1,5 +1,5 @@
 sudo apt update
-apt-fast install apache2
+apt install apache2
 echo "Apache2 installed."
 
 apache2 -version
