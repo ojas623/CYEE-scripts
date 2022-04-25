@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "enabling SSH..."
 apt install openssh-server
 apt install openssh-client
