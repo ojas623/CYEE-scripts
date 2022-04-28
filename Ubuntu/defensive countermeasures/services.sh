@@ -137,3 +137,5 @@ apt remove openssh-client
 systemctl disable openssh-client
 systemctl stop openssh-client
 apt remove openssh-server
+apt purge nginx
+apt purge nginx-core 
