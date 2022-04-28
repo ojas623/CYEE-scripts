@@ -13,5 +13,4 @@ echo "starting apache"
 sudo systemctl start apache2
 echo "apache started"
 
-cp ~/CYEE-Scripts/Ubuntu/application security/apache/apache2.conf /etc/apache2/apache2.conf
-
+rsync -a apache2.conf /etc/apache2/apache2.conf
