@@ -5,8 +5,7 @@ apt install openssh-server
 apt install openssh-client
 
 rsync -a sshd_config /etc/ssh/sshd_config
-sudo service ssh restart
-
+service sshd restart
 
 echo "SSH enabled."
 
