@@ -1,11 +1,10 @@
-#!/bin/bash
+#! /bin/bash
 
 echo "enabling SSH..."
 apt install openssh-server
 apt install openssh-client
 
 cp ~/CYEE-Scripts/Ubuntu/application security/ssh/sshd_config /etc/ssh/sshd_config
-
 sudo service ssh restart
 
 

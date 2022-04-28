@@ -1,10 +1,12 @@
 #! /bin/bash
-sudo apt install systemctl 
-sudo apt install chrony
-sudo apt install crond
-sudo apt install auditd
-sudo apt install tcpd 
+apt install systemctl
+apt install chrony
+apt install crond
+apt install auditd
+apt install tcpd 
+apt install systemctl 
 systemctl enable cron
+systemctl enable auditd
 systemctl --now disable avahi-daemon
 systemctl --now disable cups
 systemctl --now disable isc-dhcp-server
@@ -18,11 +20,10 @@ systemctl --now disable apache2
 systemctl --now disable dovecot
 systemctl --now disable squid
 systemctl --now disable snmpd
-apt install systemctl -y
 systemctl disable xinetd
 apt purge xinetd
 systemctl stop xinetd
-apt-fast remove openbsd-inetd
+apt remove openbsd-inetd
 systemctl disable cups
 systemctl stop cups
 systemctl disable isc-dhcp-server
@@ -53,10 +54,10 @@ systemctl disable nis
 systemctl stop nic
 apt-fast remove nis -y
 systemctl stop nis
-apt-fast remove rsh-client rsh-redone-client
-apt-fast remove talk
-apt-fast remove telnet
-apt-fast remove ldap-utils
+apt remove rsh-client rsh-redone-client
+apt remove talk
+apt remove telnet
+apt remove ldap-utils
 systemctl enable auditd
 systemctl disable avahi-daemon
 systemctl stop avahi-daemon
@@ -84,17 +85,17 @@ systemctl disable vsftpd
 systemctl stop vsftpd
 systemctl disable httpd
 systemctl stop httpd
-apt-fast remove openldap-clients -y
+apt remove openldap-clients 
 systemctl disable nfs
 systemctl stop nfs
-apt-fast remove mctrans -y
-apt-fast remove ypbind -y
+apt remove mctrans -y
+apt remove ypbind -y
 systemctl disable ypserv
 systemctl stop ypserv
 apt-fast remove ypserv -y
 systemctl disable rpcbind
 systemctl stop rpcbind
-apt-fast remove rsh -y
+apt remove rsh -y
 apt-fast remove rsh-client -y
 systemctl disable rexec.socket
 systemctl stop rexec.socket
@@ -107,7 +108,7 @@ systemctl stop rsyncd
 systemctl disable smb
 systemctl stop smb
 systemctl --now disable smbd
-apt-fast remove setroubleshoot -y
+apt remove setroubleshoot 
 systemctl disable snmpd
 systemctl stop snmpd
 systemctl disable minetest
@@ -117,15 +118,22 @@ systemctl stop ntalk
 apt-fast remove talk -y
 systemctl disable snmpd
 systemctl stop snmpd
-apt-fast remove telnet
+apt remove telnet
 systemctl disable telnet.socket
 systemctl stop telnet.socket
-apt-fast remove telnet-server
-apt-fast remove tftp-server
-apt-fast remove tftp
+apt remove telnet-server
+apt remove tftp-server
+apt remove tftp
 systemctl disable tftp
 systemctl stop tftp
 systemctl disable tftp.socket
 systemctl stop tftp.socket
 systemctl stop postgresql
 systemctl disable postgresql
+apt remove postgresql-client
+systemctl disable openssh-server
+systemctl stop openssh-server
+apt remove openssh-client
+systemctl disable openssh-client
+systemctl stop openssh-client
+apt remove openssh-server
