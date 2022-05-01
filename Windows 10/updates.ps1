@@ -1,4 +1,5 @@
 Write-Output "updating the system"
 
-Install-Module PSWindowsUpdate
-Get-WindowsUpdate -AcceptAll -Install -AutoReboot
+Start-Job -Name "Windows Updates" -ScriptBlock {
+    Install-WindowsUpdate -MicrosoftUpdate -AcceptAll; Get-WuInstall -AcceptAll -IgnoreReboot; Get-WuInstall -AcceptAll -Install -IgnoreReboot
+}

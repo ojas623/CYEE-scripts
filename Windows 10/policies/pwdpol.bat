@@ -2,11 +2,14 @@
 setlocal enabledelayedexpansion
 net session
 
-rem setting password policy and complexity
 
 net accounts /minpwlen:10
 net accounts /maxpwage:30
 net accounts /minpwage:10
 net accounts /uniquepw:5
 
-echo "done. please enable password must meet complexity requirements, and disable reversible encryption"
+
+echo "done"
+echo "REMEMBER: Set 'store passwords with reversible encryption' to NO"
+echo "REMEMBER: Set 'Password must meet complexity requirements' to YES"
+echo "REMEMBER: Set 'Relax minimum password length limits' to NO"
