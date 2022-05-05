@@ -1,4 +1,12 @@
-FTP is a protocol that secures the transfering of a file 
+Write-Output "Enabling FTP"
+
+Install-WindowsFeature Web-FTP-Server -IncludeAllSubFeature -Verbose
+
+#FTP is a protocol that secures the transfering of a file 
+
+Write-Output"
+https://4sysops.com/archives/install-and-configure-an-ftp-server-with-powershell/
+
 
 To enable an FTP server do this:
     control pannel > programs and features > turn features on/off > expand IIS > enable everything for FTP
@@ -14,3 +22,4 @@ Securing FTP:
     enable IIS admin service: gpedit,msc > policies > windows settings > security settings > system services > IIS admin service -- CIS page 316
 
     make sure FTP service is enabled: gpedit.msc > policis > windows settings > security settings > system services > Microsoft FTP service  -- CIS page 325
+"
