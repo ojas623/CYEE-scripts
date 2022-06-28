@@ -19,7 +19,7 @@ To allow FTP through firewall:
     Windows Firewall > allow an app or feature through Windows Firewall > changes > FTP Server > allow on public and private < click Ok
 
 Securing FTP:
-    enable IIS admin service: gpedit,msc > policies > windows settings > security settings > system services > IIS admin service -- CIS page 316
+    enable IIS admin service: gpedit.msc > policies > windows settings > security settings > system services > IIS admin service -- CIS page 316
 
     make sure FTP service is enabled: gpedit.msc > policis > windows settings > security settings > system services > Microsoft FTP service  -- CIS page 325
 "

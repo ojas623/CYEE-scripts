@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 net session
 
 
-net accounts /minpwlen:10
+net accounts /minpwlen:14
 net accounts /maxpwage:30
 net accounts /minpwage:10
 net accounts /uniquepw:5
