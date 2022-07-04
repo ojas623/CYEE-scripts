@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #use Vim and add this to the file below: install dccp /bin/true 
 # /etc/modprobe.d/dccp.conf
 

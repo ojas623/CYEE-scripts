@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "enabling FTP..."
 sudo apt-get install proftpd
 sudo ufw allow 21

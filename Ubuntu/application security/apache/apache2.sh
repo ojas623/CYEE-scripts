@@ -1,3 +1,6 @@
+#!/bin/bash
+
+
 sudo apt update
 apt install apache2
 echo "Apache2 installed."

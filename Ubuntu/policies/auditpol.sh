@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "setting audit policies..."
 
 rsync -a audit.rules /etc/audit/rules.d/audit.rules

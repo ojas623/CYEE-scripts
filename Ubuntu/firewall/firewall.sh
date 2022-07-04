@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "enabling firewall..."
 apt install ufw -y
 sudo ufw enable
