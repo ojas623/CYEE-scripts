@@ -14,8 +14,7 @@ if [ $admin = "y" ]
 then
     sudo usermod -a -G sudo $user
     echo "added $user to sudo group"
-fi
-
 else
+
     echo "user will not become an administrator"
 fi
