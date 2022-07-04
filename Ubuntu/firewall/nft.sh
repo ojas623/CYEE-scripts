@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo apt install nftables
-cp ~ /CYEE-scripts/Ubuntu/firewall/nftables.rules /etc/nftables.rules
+rsync -a /CYEE-scripts/Ubuntu/firewall/nftables.rules /etc/nftables.rules 
 nft -f /etc/nftables.rules
 
 iptables -L 

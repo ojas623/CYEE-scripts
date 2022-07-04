@@ -4,15 +4,15 @@ echo "Enter the name of the user you want to add:"
 read -r user
 sudo adduser "$user"
 echo "Enter the password for the user:"
-read -s password
-sudo usermod -p $password $user
+read  -r -s password
+sudo usermod -p "$password" "$user"
 echo "added $user"
 
 echo "do you want to make $user an administrator? (y/n)"
-read admin
-if [ $admin = "y" ]
+read -r admin
+if [ "$admin" = "y" ]
 then
-    sudo usermod -a -G sudo $user
+    sudo usermod -a -G sudo "$user"
     echo "added $user to sudo group"
 else
 
