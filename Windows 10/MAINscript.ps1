@@ -17,6 +17,9 @@ if ($option1 -eq "y") {
     Write-Output "9. critical services (rdp, smb, ftp)"
     Write-Output "10. general stuff"
     Write-Output "11. network security"
+    Write-Output "12. updates"
+    Write-Output "13. disable services / features"
+
 
     if($choice -eq "1"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\user accounts\usersAddRem.ps1'
@@ -53,6 +56,27 @@ if ($option1 -eq "y") {
     if($choice -eq "8"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\user accounts\disAdmGst.ps1'
     }
+
+    if($choice -eq "9"){
+        . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\application security\critServ.ps1'
+    }
+
+    if($choice -eq "10"){
+        . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\misc.ps1'
+    }
+
+    if($choice -eq "11"){
+        . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\netSec.ps1'
+    }
+
+    if($choice -eq "12"){
+        . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\updates.ps1'
+    }
+
+    if($choice -eq "13"){
+        . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\disServ.ps1'
+    }
+
 
 
 
