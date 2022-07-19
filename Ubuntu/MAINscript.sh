@@ -14,10 +14,10 @@ then
 
     if [ "$input" = "2" ]
     then
-    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/user accounts/addDeluser.sh 
+    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/user accounts/changePwd.sh 
     fi
 
-    
+
 
 elif [[ $REPLY =~ n$ ]]
 then
