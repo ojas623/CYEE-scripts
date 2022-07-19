@@ -23,58 +23,71 @@ if ($option1 -eq "y") {
 
     if($choice -eq "1"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\user accounts\usersAddRem.ps1'
+        Clear-Host
     }
 
     if($choice -eq "2"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\user accounts\pwd.ps1'
+        Clear-Host
     }
 
     if($choice -eq "3"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\policies\auditpol.ps1'
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\policies\lockoutpol.ps1'
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\policies\pwdpol.ps1'
+        Clear-Host
     }
 
     if($choice -eq "4"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\user accounts\userProperty.ps1'
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\user accounts\acctType.ps1'
+        Clear-Host
     }
 
     if($choice -eq "5"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\firewall.ps1'
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\smartscreen.ps1'
+        Clear-Host
     }
 
     if($choice -eq "6"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\delMedia.ps1'
+        Clear-Host
     }
 
     if($choice -eq "7"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\blockPort.ps1'
+        Clear-Host
     }
 
     if($choice -eq "8"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\user accounts\disAdmGst.ps1'
+        Clear-Host
     }
 
     if($choice -eq "9"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\application security\critServ.ps1'
+        Clear-Host
     }
 
     if($choice -eq "10"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\misc.ps1'
+        Clear-Host
     }
 
     if($choice -eq "11"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\netSec.ps1'
+        Clear-Host
     }
 
     if($choice -eq "12"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\updates.ps1'
+        Clear-Host
     }
 
     if($choice -eq "13"){
         . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\disServ.ps1'
+        Clear-Host
     }
 
 
