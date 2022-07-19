@@ -1,8 +1,4 @@
-@echo off
-setlocal enabledelayedexpansion
-net session
-
-echo "setting password user properties..."
+Write-Output "setting password user properties..."
 
 wmic UserAccount set PasswordExpires = True
 wmic UserAccount set PasswordChangeable = True
