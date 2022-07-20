@@ -86,7 +86,7 @@ if ($option1 -eq "y") {
     }
 
     if($choice -eq "13"){
-        . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\disServ.ps1'
+        . 'C:\Users\ojasa\OneDrive\Desktop\CYEE scripts\CYEE-scripts\Windows 10\defensive countermeasures\services.ps1'
         Clear-Host
     }
 

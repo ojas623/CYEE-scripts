@@ -9,12 +9,12 @@ then
     read -r input 
     if [ "$input" = "1" ]
     then 
-    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/user accounts/addDeluser.sh 
+    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/user accounts/usersAddRem.sh 
     fi
 
     if [ "$input" = "2" ]
     then
-    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/user accounts/changePwd.sh 
+    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/user accounts/pwd.sh 
     fi
 
     if [ "$input" = "3" ]
@@ -30,12 +30,12 @@ then
 
     if [ "$input" = "5" ]
     then
-    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/firewall/firewall.sh
+    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/defensive countermeasures/firewall.sh
     fi
 
     if [ "$input" = "6" ]
     then
-    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/defensive countermeasures/prohibitedFile.sh
+    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/defensive countermeasures/delMedia.sh
     fi
 
     if [ "$input" = "7" ]
@@ -65,12 +65,12 @@ then
 
     if [ "$input" = "12" ]
     then
-    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/updates/ubuntu.sh
+    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/updates.sh
     fi
 
     if [ "$input" = "13" ]
     then
-    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/firewall/networkSec.sh
+    ./Users/ojasa/OneDrive/CYEE Scripts/CYEE-Scripts/Ubuntu/defensive countermeasures/netSec.sh
     fi
 
 
